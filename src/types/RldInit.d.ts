@@ -24,4 +24,23 @@ export type RldInit = {
      * @type { string }
      */
     host?: string;
+    /**
+     * @description
+     * Object of attributes used as key value pair to add to the created script tag.
+     * This can be useful to add a nonce or similar attributes to the script tag if necessary.
+     *
+     * eg:
+     * ```js
+     * {
+     *   attributes: {
+     *     'class': 'Test'
+     *   }
+     * }
+     *
+     * // this will add the class 'test' to the script tag
+     * ```
+     *
+     * @type { Record<string, string> }
+     */
+    attributes?: Record<string, string>;
 };
