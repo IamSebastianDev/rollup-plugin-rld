@@ -24,7 +24,7 @@ After installing the necessary tools, you can run the commands below to start de
 
 -   `yarn preci`: Removes all files inside the node_modules folder. Is part of the repository setup.
 -   `yarn ci`: Installs all dependencies without generating a lockfile and throws and error if an update is needed.
--   `yarn postinstall`: Installs husky and the hooks
+-   `yarn setup`: Installs husky and the hooks
 -   `yarn build`: Builds the library
 -   `yarn dev`: Build the library in watch mode
 -   `yarn test`: Runs the integrated tests
