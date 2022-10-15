@@ -12,5 +12,6 @@ test(`Plugin instances correctly`, (t) => {
     t.is(typeof plugin.buildStart, 'function');
     t.is(typeof plugin.transform, 'function');
     t.is(typeof plugin.closeWatcher, 'function');
+    t.is(typeof plugin.buildEnd, 'function');
     t.is(plugin.name, 'Rollup-Plugin-Rld');
 });

@@ -2,7 +2,7 @@
 
 import http, { Server } from 'node:http';
 import type { ServerInit } from '../types';
-import { log } from '../utils/log.util';
+import { logSuccess } from '../utils/logSuccess.util';
 
 /**
  * @description
@@ -32,7 +32,7 @@ export const createServer = (serverInit: ServerInit): Server => {
         // page will reload
         emitter.reset();
         emitter.subscribe(() => {
-            log(`Reloading...`);
+            logSuccess(`Reloading...`);
             res.write('data: { "rld": "true" }\n\n');
         });
     });
