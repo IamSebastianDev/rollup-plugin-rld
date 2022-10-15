@@ -21,6 +21,8 @@ jobs:
                 cache: 'npm'
           - name: CI setup
             run: yarn ci
+          - name: Run tests
+            run: yarn test
     publish:
         runs-on: ubuntu-latest
         needs: ci
