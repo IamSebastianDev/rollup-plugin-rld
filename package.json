@@ -24,6 +24,7 @@
     "@rollup/plugin-commonjs": "^23.0.0",
     "@rollup/plugin-node-resolve": "^15.0.0",
     "@types/node": "^18.11.0",
+    "ava": "^4.3.3",
     "esbuild": "^0.15.11",
     "husky": "^8.0.1",
     "prettier": "^2.7.1",
@@ -41,7 +42,7 @@
     "postinstall": "npx husky install",
     "build": "rollup -c .config/rollup.config.js",
     "dev": "yarn build --watch",
-    "test": "",
+    "test": "ava ./test",
     "semantic-release": "semantic-release --branches main"
   }
 }

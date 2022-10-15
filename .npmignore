@@ -6,3 +6,4 @@ node_modules
 .prettierignore
 .prettierrc
 commitlint.config.js
+test
