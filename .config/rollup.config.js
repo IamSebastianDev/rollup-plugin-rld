@@ -15,7 +15,11 @@ const bundle = (config) => ({
 
 export default [
     bundle({
-        plugins: [esbuild()],
+        plugins: [
+            commonjs(), 
+            resolve(), 
+            esbuild(), 
+            cleanup({extensions: ['.ts']})],
         output: [
             {
                 file: pkg.main,
@@ -30,10 +34,21 @@ export default [
         ],
     }),
     bundle({
-        plugins: [resolve(), commonjs(), cleanup({ extensions: ['.ts'] }), dts()],
         output: {
             file: pkg.types,
             format: 'es',
         },
+        plugins: [
+            resolve(), 
+            commonjs(),
+            cleanup({ extensions: ['.ts'] }), 
+            esbuild(),
+            /** 
+             * Workaround for rollup-plugin-dts not supporting rollup v3^ configurations as
+             * described here: https://github.com/Swatinem/rollup-plugin-dts/issues/226
+             * Can be removed once dts updates configurations
+             */
+            {...dts(), outputOptions: (opts) => ({...opts, interop: 'esModule'})}
+        ],
     }),
 ];
