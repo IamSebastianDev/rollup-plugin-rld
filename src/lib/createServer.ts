@@ -15,7 +15,8 @@ import { logSuccess } from '../utils/logSuccess.util';
 
 export const createServer = (serverInit: ServerInit): Server => {
     return http.createServer(async (req, res) => {
-        const { emitter, url } = serverInit;
+        let { emitter, url } = serverInit;
+        url = url[0] === '/' ? url : '/' + url;
 
         // if the passed url is different from the request url,
         // cancel the request.
