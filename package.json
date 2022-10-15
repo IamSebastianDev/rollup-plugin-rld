@@ -39,7 +39,7 @@
   "scripts": {
     "preci": "rm -rf node_modules",
     "ci": "yarn install --frozen-lockfile",
-    "postinstall": "npx husky install",
+    "setup": "npx husky install",
     "build": "rollup -c .config/rollup.config.js",
     "dev": "yarn build --watch",
     "test": "ava ./test",
