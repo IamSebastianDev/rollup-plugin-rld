@@ -52,6 +52,14 @@ export const rld = (init: Partial<RldInit> = {}): Plugin => {
         },
 
         /**
+         * The `buildEnd` hook is used to emit the reload event.
+         */
+        async buildEnd() {
+            if (!watch) return;
+            emitter.emit();
+        },
+
+        /**
          * The `closeWatcher` hoo is used to close the server so as to not leave any
          * unterminated servers.
          */
