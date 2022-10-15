@@ -32,7 +32,7 @@ export const createServer = (serverInit: ServerInit): Server => {
         // page will reload
         emitter.reset();
         emitter.subscribe(() => {
-            logSuccess(`Reloading...`);
+            console.log(logSuccess(`Reloading...`));
             res.write('data: { "rld": "true" }\n\n');
         });
     });
