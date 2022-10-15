@@ -55,16 +55,12 @@ Default: `31415`
 
 The port the plugin will use to listen and dispatch requests on. If your plugin throws an `EADDRINUSE` error, you can change the property to choose a port not yet used. This can also be useful when you use multiple instances of the plugin.
 
----
-
 ### `host`
 
 Type: `string`  
 Default: `localhost`
 
 The hostname the server will use to listen to.
-
----
 
 ### `url`
 
@@ -73,10 +69,17 @@ Default: `/rld`
 
 The url the server will expose. The reload script will use the url to connect to the reload server. The url can be given with or without leading slash.
 
+### `attributes`
+
+Type: `Record<string, string>`  
+Default: `{}`
+
+Attributes is object that can be used to pass attributes to the created script tag. This can be useful when needing to set attributes like `nonce`, `referrerpolicy` or `crossorigin`.
+
 ## Contributing
 
-If you would like to contribute, follow the [contribution guide](./contributing.md)
+If you would like to contribute, take a look at the [contribution guide](./contributing.md).
 
 ## License
 
-The plugin is licensed under the [MIT License](https://opensource.org/licenses/MIT)
+The plugin is licensed under the [MIT License](https://opensource.org/licenses/MIT).

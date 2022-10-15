@@ -73,7 +73,11 @@ export const rld = (init: Partial<RldInit> = {}): Plugin => {
          */
         async transform(code, module) {
             if (!watch || !this.getModuleInfo(module)?.isEntry) return code;
-            return `(${injectable.toString()})(${config.port}, '${config.host}', '${config.url}');\n` + code;
+            return (
+                `(${injectable.toString()})(${config.port}, '${config.host}', '${config.url}', '${JSON.stringify(
+                    config.attributes || {}
+                )}');\n` + code
+            );
         },
     };
 };
