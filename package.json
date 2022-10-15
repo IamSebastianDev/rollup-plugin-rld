@@ -1,0 +1,9 @@
+{
+  "name": "rollup-plugin-rld",
+  "version": "1.0.0",
+  "description": "Rollup plugin to inject a live reload script into your bundle",
+  "main": "dist/index.js",
+  "author": "Sebastian Heinz",
+  "license": "MIT",
+  "private": false
+}
