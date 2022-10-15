@@ -29,10 +29,6 @@ After installing the necessary tools, you can run the commands below to start de
 -   `yarn dev`: Build the library in watch mode
 -   `yarn test`: Runs the integrated tests
 
-## Development - Project Structure
-
--   TBD
-
 ## Development - Enforcing Code Standards
 
 This project uses multiple tools to enforce code quality:
@@ -63,4 +59,4 @@ $ git checkout -b bugfix/bug-to-fix
 
 ## Development - Github Actions
 
--   TBD
+-   Publish: A automatic action that is triggered when merging into `main`. Will create a new Release and publish it to npm if the Tests pass.
