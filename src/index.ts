@@ -20,7 +20,7 @@ import type { RldInit } from './types';
 
 export const rld = (init: Partial<RldInit> = {}): Plugin => {
     // Parse the user provided initialization object into the defaults.
-    const config = { port: 31415, host: 'localhost', url: 'rld', ...init };
+    const config = { port: 31415, host: 'localhost', url: '/rld', ...init };
 
     const emitter = createEmitter();
     let watch = false;

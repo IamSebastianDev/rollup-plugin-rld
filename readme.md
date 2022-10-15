@@ -50,24 +50,28 @@ export default {
 
 ### `port`
 
-Type: `number`
+Type: `number`  
 Default: `31415`
 
-The port the server will use to listen to.
+The port the plugin will use to listen and dispatch requests on. If your plugin throws an `EADDRINUSE` error, you can change the property to choose a port not yet used. This can also be useful when you use multiple instances of the plugin.
+
+---
 
 ### `host`
 
-Type: `string`
+Type: `string`  
 Default: `localhost`
 
 The hostname the server will use to listen to.
 
+---
+
 ### `url`
 
-Type: `string`
-Default: `rld`
+Type: `string`  
+Default: `/rld`
 
-The url the server will expose. The reload script will use the url to connect to the reload server.
+The url the server will expose. The reload script will use the url to connect to the reload server. The url can be given with or without leading slash.
 
 ## Contributing
 
