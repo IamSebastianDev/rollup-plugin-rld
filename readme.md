@@ -2,7 +2,10 @@
 
 # Rollup-Plugin-Rld
 
-A Rollup plugin to reload your webpage when the bundle is regenerated.
+[![Npm package version](https://badgen.net/npm/v/rollup-plugin-rld)](https://www.npmjs.com/package/rollup-plugin-rld) [![Npm package total downloads](https://badgen.net/npm/dt/rollup-plugin-rld)](https://npmjs.com/package/rollup-plugin-rld) [![Npm package license](https://badgen.net/npm/license/rollup-plugin-rld)](https://npmjs.com/package/rollup-plugin-rld)
+[![Github tag](https://badgen.net/github/tag/iamsebastiandev/rollup-plugin-rld)](https://github.com/iamsebastiandev/rollup-plugin-rld/tags)
+
+A [Rollup](https://rollupjs.org/guide/en/) plugin to reload your webpage when the created bundle is regenerated.
 
 ## Overview
 
