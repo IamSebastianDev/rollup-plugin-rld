@@ -3,7 +3,7 @@
 export const injectable = (port: number | string, host: string, url: string, attributes: string) => {
     // Return early if there is no window or document or the script tag already exists.
     if (!window || !document) return;
-    if (document.head.querySelector(`[url=${url}]`)) return;
+    if (document.head.querySelector(`[url='${url}']`)) return;
 
     const script = document.createElement('script');
     Object.entries(JSON.parse(attributes) as Record<string, string>).forEach(([key, value]) =>
