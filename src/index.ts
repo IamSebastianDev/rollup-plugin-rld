@@ -20,7 +20,9 @@ import type { RldInit } from './types';
 
 export const rld = (init: Partial<RldInit> = {}): Plugin => {
     // Parse the user provided initialization object into the defaults.
-    const config = { port: 31415, host: 'localhost', url: '/rld', ...init };
+    const config = { port: 31415, host: 'localhost', url: '/rld', log: false, ...init };
+    // normalize config.url parameter to ensure correct url param
+    config.url = config.url[0] === '/' ? config.url : '/' + config.url;
 
     const emitter = createEmitter();
     let watch = false;
@@ -76,7 +78,7 @@ export const rld = (init: Partial<RldInit> = {}): Plugin => {
             return (
                 `(${injectable.toString()})(${config.port}, '${config.host}', '${config.url}', '${JSON.stringify(
                     config.attributes || {}
-                )}');\n` + code
+                )}', ${config.log});\n` + code
             );
         },
     };
