@@ -77,7 +77,14 @@ The url the server will expose. The reload script will use the url to connect to
 Type: `Record<string, string>`  
 Default: `{}`
 
-Attributes is object that can be used to pass attributes to the created script tag. This can be useful when needing to set attributes like `nonce`, `referrerpolicy` or `crossorigin`.
+Attributes is a object that can be used to pass attributes to the created script tag. This can be useful when needing to set attributes like `nonce`, `referrerpolicy` or `crossorigin`.
+
+### `log`
+
+Type: `boolean`  
+Default: `false`
+
+A Boolean flag indicating if a log entry should be created inside the browser when a reload occurs.
 
 ## Contributing
 
