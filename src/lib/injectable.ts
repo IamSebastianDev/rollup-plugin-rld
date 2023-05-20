@@ -10,7 +10,7 @@ export const injectable = (port: number | string, host: string, url: string, att
         script.setAttribute(key, value)
     );
     script.setAttribute('url', url);
-    script.textContent = `new EventSource('http://${host}:${port}/${url}').addEventListener('message', (ev) => JSON.parse(ev.data).rld && window.navigation.reload());`;
+    script.textContent = `new EventSource('http://${host}:${port}${url}').addEventListener('message', (ev) => JSON.parse(ev.data).rld && window.navigation.reload());`;
 
     // Inject a comment before the script tag to mark the script as useful
     document.head.appendChild(document.createComment(' Script injected by Rollup-Plugin-Rld '));
