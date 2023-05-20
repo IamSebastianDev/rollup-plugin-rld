@@ -43,4 +43,10 @@ export type RldInit = {
      * @type { Record<string, string> }
      */
     attributes?: Record<string, string>;
+    /**
+     * @description
+     * Boolean flag indicating if information should be logged to the browser console.
+     * @type { boolean }
+     */
+    log?: boolean;
 };
